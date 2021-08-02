@@ -87,7 +87,60 @@ class _ReportsDebitScreen extends State<ReportsDebitScreen> {
                     color: HexColor("#323232"),
                     fontSize: 24,
                   )),
-              Container(height: 117),
+              Container(
+                  height: 117,
+                  alignment: Alignment.center,
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        height: 117,
+                        alignment: Alignment.center,
+                        padding: EdgeInsets.only(right: 24.0),
+                        child: Column(children: <Widget>[
+                          Text("TRANSACTION DATE"),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.zero)),
+                              onPressed: () {},
+                              child: Row(
+                                children: <Widget>[
+                                  Text("Jun 16, 2021 - Jun 17, 2021"),
+                                  Icon(Icons.arrow_drop_down)
+                                ],
+                              ))
+                        ]),
+                      ),
+                      Container(
+                          padding: EdgeInsets.only(right: 336.0),
+                          child: Column(children: <Widget>[
+                            Text("CENTERS"),
+                            ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.zero)),
+                                onPressed: () {},
+                                child: Row(
+                                  children: <Widget>[
+                                    Text("All (4 centers)"),
+                                    Icon(Icons.arrow_drop_down)
+                                  ],
+                                ))
+                          ])),
+                      Container(
+                          child: Row(children: <Widget>[
+                        ElevatedButton(
+                            onPressed: () {}, child: Icon(Icons.download)),
+                        ElevatedButton(
+                            onPressed: () {}, child: Icon(Icons.email)),
+                        ElevatedButton(
+                            onPressed: () {},
+                            child: Icon(Icons.question_answer)),
+                        ElevatedButton(
+                            onPressed: () {}, child: Icon(Icons.save)),
+                      ]))
+                    ],
+                  )),
               Container(
                   child: DataTable(
                 decoration: BoxDecoration(
